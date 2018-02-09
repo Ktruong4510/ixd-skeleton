@@ -1,9 +1,6 @@
-
-/*
- * GET home page.
- */
+// Get all of our friend data
 
 exports.view = function(req, res){
-  var name = req.params.name; 
-  res.render("index");
+
+	res.render('index');
 };
