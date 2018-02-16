@@ -1,128 +1,117 @@
 <html>
 <head>
-	<title>test</title>	
+	<title>goals</title>	
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
 </head>
+<style>
+
+.header {
+	color:#4CAF50;
+	padding: 25px 15px;
+	border:none;
+	font-size:24px;
+	margin: 4px 2px;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 30px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+</style>
 <body>
  </div>
 		<div id="home">
-				<button onclick="goBack()" class="center-block">
-				<img src="images/hom.jpg" alt="Home" class="center-block">
+				<button onclick="goBack()" class="center-block"> home 
 			</button>
   			</div>
 
 
-		<div id="What">
-				<img src="images/wha.jpg" alt="What" class="center-block">
+		<div id="Goals Header">
+				<div class = header>
+					<h1> G O A L S </h1>
   			</div>
-<!--
-  		<hr>
-		<div id="Strength">
-			<div class = "text-center">
-				<div class="dropdown btn-group">
-					<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown-menu">
-					<img src="images/Strength.jpg" alt="Strength">
-				</button>
-				</div>
-			</div>
-		</div> 
-		<hr> 
-		<div id="Muscle">
-			<div class = "text-center">
-				<div class="dropdown btn-group">
-					<button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown-menu">
-					<img src="images/Muscle.jpg" alt="Muscle">
-				</button>
-				</div>
-			</div>
-		</div>
-		<hr>
-		<div id="Weight">
-			<div class = "text-center">
-				<div class="dropdown btn-group">
-					<button class="btn btn-default dropdown-toggle" type="button" id="menu3" data-toggle="dropdown-menu">
-					<img src="images/Weight.jpg" alt="Weight">
-				</button>
-				</div>
-			</div>
-		</div>
-		<hr>
-		<div id="Stamina">
-			<div class = "text-center">
-				<div class="dropdown btn-group">
-					<button class="btn btn-default dropdown-toggle" type="button" id="menu4" data-toggle="dropdown-menu">
-					<img src="images/Stamina.jpg" alt="Stamina">
-				</button>
-				</div>
-			</div>
-		</div>
-		<hr>
-		<div id="Habit">
-			<div class = "text-center">
-				<div class="dropdown btn-group">
-					<button class="btn btn-default dropdown-toggle" type="button" id="menu5" data-toggle="dropdown-menu">
-					<img src="images/Habit.jpg" alt="Habit">
-				</button>
-				</div>
-			</div>
-		</div>
--->
 
-<hr>
-		<div id="Strength">
-			<div class = "text-center">
-				<a href = "goals/strength.html">
-					<img src="images/strengt.jpg" alt="Strength">
-				</a>
-				</button>
-				</div>
-			</div>
-		</div> 
-		<hr> 
-		<div id="Muscle">
-			<div class = "text-center">
-				<a href = "goals/muscles.html">
-					<img src="images/muscl.jpg" alt="Muscle">
-				</a>
-				</button>
-				</div>
-			</div>
-		</div>
-		<hr>
-		<div id="Weight">
-			<div class = "text-center">
-				<a href = "goals/weight.html">
-					<img src="images/weigh.jpg" alt="Weight">
-				</a>
-				</button>
-				</div>
-			</div>
-		</div>
-		<hr>
-		<div id="Stamina">
-			<div class = "text-center">
-				<a href = "goals/stamina.html">
-					<img src="images/stamin.jpg" alt="Stamina">
-				</a>
-				</button>
-				</div>
-			</div>
-		</div>
-		<hr>
-		<div id="Habit">
-			<div class = "text-center">
-				<a href = "goals/habit.html">
-					<img src="images/habi.jpg" alt="Habit">
-				</a>
-				</button>
-				</div>
-			</div>
-		</div>
+<div class="tab">
+  <button class="tablinks" onclick="openGoals(event, 'Weekly')">Weekly</button>
+  <button class="tablinks" onclick="openGoals(event, 'Monthly')">Monthly</button>
+  <button class="tablinks" onclick="openGoals(event, 'Yearly')">Yearly</button>
+</div>
 
+<div id = "Weekly" class = "tabcontent">
+	<h3>Weekly</h3>
+	<p> test <p>
+	<form id="addFriendForm" role="form" method="get" action="/add">
+		<h3>Add a Goal</h3>
+	    <div class="form-group">
+	      <label for="goal">Goal:</label>
+	      <input type="text" class="form-control" id="goal" placeholder="Run three times a week" name="goal">
+	    </div>
+	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add your Goal!"></input>
+	</form>
+</div>
+
+<div id = "Monthly" class = "tabcontent">
+	<h3>Monthly</h3>
+	<p> test <p>
+</div>
+
+<div id = "Yearly" class = "tabcontent">
+	<h3>Yearly</h3>
+	<p> test <p>
+</div>
+
+	
 <script>
 function goBack() {
     window.history.back();
+}
+
+function openGoals(evt, goalTime) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(goalTime).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 </script>
 

@@ -9,6 +9,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
+var add = require('./routes/add');
 var page = require('./routes/page');
 var settings = require('./routes/settings');
 var goals = require('./routes/goals');
@@ -20,6 +21,8 @@ var muscle = require ('./routes/muscle');
 var weight = require ('./routes/weight');
 var stamina = require ('./routes/stamina');
 var habit = require ('./routes/habit');
+var homepage = require('./routes/homepage');
+var test = require('./routes/test');
 // Example route
 // var user = require('./routes/user');
 
@@ -51,12 +54,17 @@ app.get('/settings.html', settings.viewSettings);
 app.get('/goals.html', goals.viewGoals);
 app.get('/friends.html', friends.viewFriends);
 app.get('/schedule.html', schedule.viewSchedule);
-app.get('/exercises.html', excercises.viewExcercises);
+app.get('/excercises.html', excercises.viewExcercises);
+//app.get('/excercises.html', excercises.addExcercises);
 app.get('/goals/strength.html', strength.viewStrength);
 app.get('/goals/muscles.html', muscle.viewMuscle);
 app.get('/goals/weight.html', weight.viewWeight);
 app.get('/goals/stamina.html', stamina.viewStamina);
 app.get('/goals/habit.html', habit.viewHabit);
+//app.get('/add', add.addExcercise);
+app.post('/homepage.html', homepage.viewHomepage);
+app.get('/add', add.addFriend);
+//app.get('/add', excercises.addFriend);
 // Example route
 // app.get('/users', user.list);
 
