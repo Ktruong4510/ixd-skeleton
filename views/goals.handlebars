@@ -8,11 +8,12 @@
 <style>
 
 .header {
-	color:#4CAF50;
+	color:#FF7E10;
 	padding: 25px 15px;
 	border:none;
 	font-size:24px;
 	margin: 4px 2px;
+    text-align: center;
 }
 
 .tab {
@@ -72,9 +73,17 @@
 </div>
 
 <div id = "Weekly" class = "tabcontent">
-	<h3>Weekly</h3>
-	<p> test <p>
-	<form id="addFriendForm" role="form" method="get" action="/add">
+
+    {{#each goals}}
+    <div class = "test">
+      <div class = "setWidth">
+          <h3><input type = "checkbox">{{description}}<br></h3>
+
+      </div>
+  </div>
+    {{/each}}
+
+	<form id="addFriendForm" role="form">
 		<h3>Add a Goal</h3>
 	    <div class="form-group">
 	      <label for="goal">Goal:</label>
@@ -86,12 +95,34 @@
 
 <div id = "Monthly" class = "tabcontent">
 	<h3>Monthly</h3>
-	<p> test <p>
+	<p>  <p>
+
+    <form id="addFriendForm" role="form">
+        <h3>Add a Goal</h3>
+        <div class="form-group">
+          <label for="goal">Goal:</label>
+          <input type="text" class="form-control" id="goal" placeholder="Run 20 miles this month" name="goal">
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add your Goal!"></input>
+    </form>
+</div>
+
 </div>
 
 <div id = "Yearly" class = "tabcontent">
 	<h3>Yearly</h3>
 	<p> test <p>
+
+    <form id="addFriendForm" role="form">
+        <h3>Add a Goal</h3>
+        <div class="form-group">
+          <label for="goal">Goal:</label>
+          <input type="text" class="form-control" id="goal" placeholder="Lose 30 pounds" name="goal">
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add your Goal!"></input>
+    </form>
+</div>
+
 </div>
 
 	

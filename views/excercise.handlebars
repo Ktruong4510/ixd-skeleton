@@ -8,11 +8,12 @@
 <style>
 
 .header {
-	color:#4CAF50;
+	color:#FF7E10;
 	padding: 25px 15px;
 	border:none;
 	font-size:24px;
 	margin: 4px 2px;
+  text-align: center;
 }
 
 .tab {
@@ -67,9 +68,9 @@
 
 <div class="tab">
   <button class="tablinks" onclick="openGoals(event, 'Strength')">Strength</button>
-  <button class="tablinks" onclick="openGoals(event, 'Endurance')">Endurance</button>
+  <button class="tablinks" onclick="openGoals(event, 'Stretching')">Stretching</button>
   <button class="tablinks" onclick="openGoals(event, 'Core')">Core</button>
-  <button class="tablinks" onclick="openGoals(event, 'Weight')">Weight</button>
+  <button class="tablinks" onclick="openGoals(event, 'Cardio')">Cardio</button>
 </div>
 
 <div id = "Strength" class = "tabcontent">
@@ -77,31 +78,62 @@
     {{#each test}}
     <div class = "test">
       <div class = "setWidth">
-          <h3><a class="newname">{{name}}</a></h3>
-          <p>{{description}}</p>
-          <p>{{category}}</p>
+          <h3><a class="newname" href = "#">{{name}}</a></h3>
+          <p>{{strength}}</p>
           <p>{{target}}</p>
           <p>{{equipment}}</p>
           <p>{{steps}}</p>
+          <p>{{warning}}</p>
       </div>
   </div>
     {{/each}}
 
 </div>
 
-<div id = "Endurance" class = "tabcontent">
-	<h3>Endurance</h3>
-	<p> test <p>
+<div id = "Stretching" class = "tabcontent">
+    {{#each test}}
+    <div class = "test">
+      <div class = "setWidth">
+          <h3><a class="newname" href = "#">{{name4}}</a></h3>
+          <p>{{strength4}}</p>
+          <p>{{target4}}</p>
+          <p>{{equipment4}}</p>
+          <p>{{steps4}}</p>
+          <p>{{warning4}}</p>
+      </div>
+  </div>
+    {{/each}}
 </div>
 
 <div id = "Core" class = "tabcontent">
-	<h3>Core</h3>
-	<p> test <p>
+    {{#each test}}
+    <div class = "test">
+      <div class = "setWidth">
+          <h3><a class="newname" href = "#">{{name3}}</a></h3>
+          <p>{{strength3}}</p>
+          <p>{{target3}}</p>
+          <p>{{equipment3}}</p>
+          <p>{{steps3}}</p>
+          <p>{{warning3}}</p>
+      </div>
+  </div>
+    {{/each}}
 </div>
 
-<div id = "Weight" class = "tabcontent">
-	<h3>Weight</h3>
-	<p> test <p>
+<div id = "Cardio" class = "tabcontent">
+    {{#each test}}
+    <div class = "test">
+      <div class = "setWidth">
+          <h3><a class="newname" href = "#">{{name2}}</a></h3>
+          <p>{{strength2}}</p>
+          <p>{{target2}}</p>
+          <p>{{equipment2}}</p>
+          <p>{{steps2}}</p>
+          <p>{{warning2}}</p>
+      </div>
+  </div>
+    {{/each}}
+
 </div>
 	
 <script>

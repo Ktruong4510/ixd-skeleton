@@ -1,11 +1,6 @@
+
 {
 	"test": [
-		{
-			"name": "Doug Engelbart",
-			"description": "Has awesome pet mice",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
-		},
-		
 		{
 			"category" : "Strength",
 			"name" : "Incline Hammer Curls",
@@ -13,6 +8,96 @@
 			"equipment" : "Equipment Type: Dumbell",
 			"steps": "1. Seat yourself on an incline bench with a dumbbell in each hand. You should pressed firmly against he back with your feet together. Allow the dumbbells to hang straight down at your side, holding them with a neutral grip. This will be your starting position. 2. Initiate the movement by flexing at the elbow, attempting to keep the upper arm stationary. 3. Continue to the top of the movement and pause, then slowly return to the start position."
 
-		}
+		},
+		{
+			"category" : "Strength",
+			"name" : "Seated Cable Rows",
+			"target" : "Muscle Targeted: Middle Back",
+			"equipment" : "Equipment Type: Cable ",
+			"steps" : "1. 1. For this exercise you will need access to a low pulley row machine with a V-bar. Note: The V-bar will enable you to have a neutral grip where the palms of your hands face each other. To get into the starting position, first sit down on the machine and place your feet on the front platform or crossbar provided making sure that your knees are slightly bent and not locked. 2. Lean over as you keep the natural alignment of your back and grab the V-bar handles. 3. With your arms extended pull back until your torso is at a 90-degree angle from your legs. Your back should be slightly arched and your chest should be sticking out. You should be feeling a nice stretch on your lats as you hold the bar in front of you. This is the starting position of the exercise. 4. Keeping the torso stationary, pull the handles back towards your torso while keeping the arms close to it until you touch the abdominals. Breathe out as you perform that movement. At that point you should be squeezing your back muscles hard. Hold that contraction for a second and slowly go back to the original position while breathing in. 5. Repeat for the recommended amount of repetitions.",
+			"warning" : "Caution: Avoid swinging your torso back and forth as you can cause lower back injury by doing so."
+		},
+		{
+			"category" : "Strength",
+			"name" : "Calf Press",
+			"target" : "Muscle Targeted: Calves",
+			"equipment" : "Equipment Type: Machine",
+			"steps" : "1. Adjust the seat so that your legs are only slightly bent in the start position. The balls of your feet should be firmly on the platform. 2. Select an appropriate weight, and grasp the handles. This will be your starting position. 3. Straighten the legs by extending the knees, just barely lifting the weight from the stack. Your ankle should be fully flexed, toes pointing up. Execute the movement by pressing downward through the balls of your feet as far as possible. 4. After a brief pause, reverse the motion and repeat."
+
+		},
+		{
+			"category2" : "Cardio",
+			"name2" : "Rope Jumping",
+			"target2" : "Muscle Targeted: Quadriceps",
+			"equipment2" : "Equipment Type: Other",
+			"steps2" : "1. Hold an end of the rope in each hand. Position the rope behind you on the ground. Raise your arms up and turn the rope over your head bringing it down in front of you. When it reaches the ground, jump over it. Find a good turning pace that can be maintained. Different speeds and techniques can be used to introduce variation. 2.Rope jumping is exciting, challenges your coordination, and requires a lot of energy. A 150 lb person will burn about 350 calories jumping rope for 30 minutes, compared to over 450 calories running."
+
+		},
+		{
+			"category2" : "Cardio",
+			"name2" : "Step Mill",
+			"target2" : "Muscle Targeted: Quadriceps",
+			"equipment2" : "Equipment Type: Machine",
+			"steps2" : "1. To begin, step onto the stepmill and select the desired option from the menu. You can choose a manual setting, or you can select a program to run. Typically, you can enter your age and weight to estimate the amount of calories burned during exercise. Use caution so that you don’t trip as you climb the stairs. It is recommended that you maintain your grip on the handles so that you don’t fall. 2. Stepmills offer convenience, cardiovascular benefits, and usually have less impact than running outside while offering a similar rate of calories burned. They are typically much harder than other cardio equipment. A 150 lb person will typically burn over 300 calories in 30 minutes, compared to about 175 calories walking."
+		},
+		{
+			"category2" : "Cardio",
+			"name2" : "Bicycling",
+			"target2" : "Muscle Targeted: Quadriceps",
+			"equipment2" : "Equipment Type: Other",
+			"steps2" : "1. To begin, seat yourself on the bike and adjust the seat to your height.Wear protective gear to avoid possible injury. Ensure that you are courteous to vehicles and pedestrians, and that you obey the rules of the road."
+
+
+		},
+		{
+			"category3" : "Core",
+			"name3" : "One-Arm Medicine Ball Slam",
+			"target3" : "Muscle Targeted: Abdominals",
+			"equipment3" : "Equipment Type: Medicine Ball",
+			"steps3" : "1. Start in a standing position with a staggered, athletic stance. Hold a medicine ball in one hand, on the same side as your back leg. This will be your starting position. 2. Begin by winding the arm, raising the medicine ball above your head. As you do so, extend through the hips, knees, and ankles to load up for the slam. 3. At peak extension, flex the shoulders, spine, and hips to throw the ball hard into the ground directly in front of you. 4. Catch the ball on the bounce and continue for the desired number of repetitions."
+
+		},
+
+		{
+			"category3" : "Core",
+			"name3" : "Plank",
+			"target3" : "Muscle Targeted: Abdominals",
+			"equipment3" : "Equipment Type: Body Only",
+			"steps3" : "1. Get into a prone position on the floor, supporting your weight on your toes and your forearms. Your arms are bent and directly below the shoulder. 2. Keep your body straight at all times, and hold this position as long as possible. To increase difficulty, an arm or leg can be raised."
+
+		},
+		{
+			"category3" : "Core",
+			"name3" : "Cross-Body Crunch",
+			"target3" : "Muscle Targeted: Abdominals",
+			"equipment3" : "Equipment Type: Body Only",
+			"steps3" : "1. Lie flat on your back and bend your knees about 60 degrees. 2. Keep your feet flat on the floor and place your hands loosely behind your head. This will be your starting position. 3. Now curl up and bring your right elbow and shoulder across your body while bring your left knee in toward your left shoulder at the same time. Reach with your elbow and try to touch your knee. Exhale as you perform this movement. Tip: Try to bring your shoulder up towards your knee rather than just your elbow and remember that the key is to contract the abs as you perform the movement; not just to move the elbow. 4. Now go back down to the starting position as you inhale and repeat with the left elbow and the right knee. 5. Continue alternating in this manner until all prescribed repetitions are done."
+
+		},
+		{
+			"category4" : "Stretching",
+			"name4" : "Standing Hip Circles",
+			"target4" : "Muscle Targeted: Abductors",
+			"equipment4" : "Equipment Type: Body Only",
+			"steps4" : "1. Begin standing on one leg, holding to a vertical support. 2. Raise the unsupported knee to 90 degrees. This will be your starting position. 3. Open the hip as far as possible, attempting to make a big circle with your knee. 4. Perform this movement slowly for a number of repetitions, and repeat on the other side."
+
+},
+{
+			"category4" : "Stretching",
+			"name4" : "Superman",
+"target4" : "Muscle Targeted: Lower Back",
+"equipment4" : "Equipment Type: Body Only",
+"steps4" : "1. To begin, lie straight and face down on the floor or exercise mat. Your arms should be fully extended in front of you. This is the starting position. 2. Simultaneously raise your arms, legs, and chest off of the floor and hold this contraction for 2 seconds. Tip: Squeeze your lower back to get the best results from this exercise. Remember to exhale during this movement. Note: When holding the contracted position, you should look like superman when he is flying. 3. Slowly begin to lower your arms, legs and chest back down to the starting position while inhaling.4. Repeat for the recommended amount of repetitions prescribed in your program."
+
+},
+{
+	"category4" : "Stretching",
+"name4" : "Inchworm",
+"target4" : "Muscle Targeted: Hamstrings",
+"equipment4" : "Equipment Type: Body Only",
+"steps4" : "1.Stand with your feet close together. Keeping your legs straight, stretch down and put your hands on the floor directly in front of you. This will be your starting position. 2. Begin by walking your hands forward slowly, alternating your left and your right. As you do so, bend only at the hip, keeping your legs straight. 3. Keep going until your body is parallel to the ground in a pushup position. 4. Now, keep your hands in place and slowly take short steps with your feet, moving only a few inches at a time. 5. Continue walking until your feet are by hour hands, keeping your legs straight as you do so."
+}
+
+
 	]
 }
