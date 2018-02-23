@@ -52,6 +52,10 @@
     border-top: none;
 }
 
+ul#faves > test {
+
+}
+
 </style>
 <body>
  </div>
@@ -74,7 +78,7 @@
 
 <div id = "Weekly" class = "tabcontent">
 
-    {{#each goals}}
+    {{#each goals.weekly}}
     <div class = "test">
       <div class = "setWidth">
           <h3><input type = "checkbox">{{description}}<br></h3>
@@ -83,45 +87,55 @@
   </div>
     {{/each}}
 
-	<form id="addFriendForm" role="form">
-		<h3>Add a Goal</h3>
-	    <div class="form-group">
-	      <label for="goal">Goal:</label>
-	      <input type="text" class="form-control" id="goal" placeholder="Run three times a week" name="goal">
-	    </div>
-	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add your Goal!"></input>
-	</form>
+
+        <div>
+        <ul id="faves">
+        </ul>
+        <h3>Add a Goal</h3>
+        <label for="goal">Goal:</label>
+        <input type="text" class="form-control" id="add" placeholder="Do 10 push-ups everday this week!" name="goal" />
+        <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addWeek()">
+        </div>
 </div>
 
 <div id = "Monthly" class = "tabcontent">
-	<h3>Monthly</h3>
-	<p>  <p>
 
-    <form id="addFriendForm" role="form">
-        <h3>Add a Goal</h3>
-        <div class="form-group">
-          <label for="goal">Goal:</label>
-          <input type="text" class="form-control" id="goal" placeholder="Run 20 miles this month" name="goal">
+    {{#each goals.monthly}}
+    <div class = "test">
+      <div class = "setWidth">
+          <h3><input type = "checkbox">{{moth}}<br></h3>
+
+      </div>
+  </div>
+    {{/each}}
+
+        <div>
+          <ul id="Months"> </ul>
+            <h3>Add a Goal</h3>
+             <label for="goal">Goal:</label>
+                <input type="text" class="form-control" id="adds" placeholder="Do 10 push-ups everday this week!" name="goal" />
+                <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addMonth()">
         </div>
-        <input type="submit" id="submitBtn" class="btn btn-default" value="Add your Goal!"></input>
-    </form>
-</div>
 
 </div>
 
 <div id = "Yearly" class = "tabcontent">
-	<h3>Yearly</h3>
-	<p> test <p>
 
-    <form id="addFriendForm" role="form">
-        <h3>Add a Goal</h3>
-        <div class="form-group">
-          <label for="goal">Goal:</label>
-          <input type="text" class="form-control" id="goal" placeholder="Lose 30 pounds" name="goal">
+    {{#each goals.yearly}}
+    <div class = "test">
+      <div class = "setWidth">
+          <h3><input type = "checkbox">{{yer}}<br></h3>
+      </div>
+  </div>
+    {{/each}}
+
+        <div>
+          <ul id="Years"> </ul>
+            <h3>Add a Goal</h3>
+             <label for="goal">Goal:</label>
+                <input type="text" class="form-control" id="addz" placeholder="Do 10 push-ups everday this week!" name="goal" />
+                <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addYear()">
         </div>
-        <input type="submit" id="submitBtn" class="btn btn-default" value="Add your Goal!"></input>
-    </form>
-</div>
 
 </div>
 
@@ -144,6 +158,47 @@ function openGoals(evt, goalTime) {
     document.getElementById(goalTime).style.display = "block";
     evt.currentTarget.className += " active";
 }
+</script>
+
+
+<script>
+    function addWeek(){
+        var test = document.createElement("test");  
+        var input = document.getElementById("add");
+        var br = document.createElement("br");
+        test.setAttribute("style",'text-align:left;');
+        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+input.value+"</h3>";
+        input.value = "";
+
+        document.getElementById("faves").appendChild(test).style.textAlign = "left";
+        document.getElementById("faves").appendChild(br);
+    }
+</script>
+
+<script>
+    function addMonth(){
+        var test = document.createElement("test");  
+        var inputs = document.getElementById("adds");
+        var br = document.createElement("br");
+ 
+        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+inputs.value+"</h3>";
+        inputs.value = "";
+        document.getElementById("Months").appendChild(test);
+        document.getElementById("Months").appendChild(br);
+    }
+</script>
+
+<script>
+    function addYear(){
+        var test = document.createElement("test");  
+        var input3 = document.getElementById("addz");
+        var br = document.createElement("br");
+ 
+        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+input3.value+"</h3>";
+        input3.value = "";
+        document.getElementById("Years").appendChild(test);
+        document.getElementById("Years").appendChild(br);
+    }
 </script>
 
     <script src="https://code.jquery.com/jquery.js"></script>

@@ -1,5 +1,6 @@
 {
-	"goals": [
+	"goals": {
+		"weekly": [
 			{
 				"description": "Lift on monday, tuesday, and friday"
 			},
@@ -9,5 +10,30 @@
 			{
 				"description": "Run for 2 miles at least once this week"
 			}
+		],
+		"monthly" : [
+			{
+				"moth": "Work out five days a week this whole month"
+			},
+			{
+				"moth": "Be able to run a mile under 8 minutes by the end of this month"
+			},
+			{
+				"moth": "Bench press 30lb plates "
+			}
+
+		],
+		"yearly" : [
+			{
+				"yer": "Lose 20 pounds by the end of this year"
+			},
+			{
+				"yer": "dead lift up to 325 lbs"
+			},
+			{
+				"yer": "Be swole like Chen"
+			}
+
 		]
+}
 }
