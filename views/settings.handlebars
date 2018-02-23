@@ -6,6 +6,11 @@
 	<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
 </head>
 <style>
+
+.body{
+	background-color: #F46E76;
+}
+
 .header {
 	color:#FF7E10;
 	padding: 25px 15px;
@@ -14,21 +19,28 @@
 	margin: 4px 2px;
   text-align: center;
 }
+
+.home{
+	font-size:40px;
+}
+
 </style>
 <body>
 		<div id="home">
-				<button onclick="goBack()" class="center-block"> home 
+			<div class = home>
+				<button onclick="goBack()" class="left-block"> Home 
 			</button>
-  			</div>
+			</div>
+  		</div>
 
 		<div id="Schedule Header">
 				<div class = header>
-					<a href = "/"><h1>log out</h1></a>
+					<button><a href = "/"><h1>Log Out</h1></a></button>
   			</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<script>
 		function goBack() {
     		window.history.back();
