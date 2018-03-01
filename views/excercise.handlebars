@@ -74,64 +74,79 @@
 </div>
 
 <div id = "Strength" class = "tabcontent">
-
     {{#each test}}
+      {{#each First}}
     <div class = "test">
       <div class = "setWidth">
-          <h3><a class="newname" href = "#">{{name}}</a></h3>
+       <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#data{{id}}"> {{name}} </button></h3>
+          <div id="data{{id}}" class="collapse">
           <p>{{strength}}</p>
           <p>{{target}}</p>
           <p>{{equipment}}</p>
           <p>{{steps}}</p>
           <p>{{warning}}</p>
+        </div>
       </div>
   </div>
     {{/each}}
-
+    {{/each}}
 </div>
+
 
 <div id = "Stretching" class = "tabcontent">
     {{#each test}}
+      {{#each Forth}}
     <div class = "test">
       <div class = "setWidth">
-          <h3><a class="newname" href = "#">{{name4}}</a></h3>
+       <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#data{{id}}"> {{name4}} </button></h3>
+          <div id="data{{id}}" class="collapse">
           <p>{{strength4}}</p>
           <p>{{target4}}</p>
           <p>{{equipment4}}</p>
           <p>{{steps4}}</p>
           <p>{{warning4}}</p>
+        </div>
       </div>
   </div>
+    {{/each}}
     {{/each}}
 </div>
 
 <div id = "Core" class = "tabcontent">
     {{#each test}}
+      {{#each Third}}
     <div class = "test">
       <div class = "setWidth">
-          <h3><a class="newname" href = "#">{{name3}}</a></h3>
+       <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#data{{id}}"> {{name3}} </button></h3>
+          <div id="data{{id}}" class="collapse">
           <p>{{strength3}}</p>
           <p>{{target3}}</p>
           <p>{{equipment3}}</p>
           <p>{{steps3}}</p>
           <p>{{warning3}}</p>
+        </div>
       </div>
   </div>
+    {{/each}}
     {{/each}}
 </div>
 
 <div id = "Cardio" class = "tabcontent">
     {{#each test}}
+      {{#each Second}}
     <div class = "test">
       <div class = "setWidth">
-          <h3><a class="newname" href = "#">{{name2}}</a></h3>
+       <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#data{{id}}"> {{name2}} </button></h3>
+          <div id="data{{id}}" class="collapse">
           <p>{{strength2}}</p>
           <p>{{target2}}</p>
           <p>{{equipment2}}</p>
           <p>{{steps2}}</p>
           <p>{{warning2}}</p>
+        </div>
       </div>
   </div>
+    {{/each}}
     {{/each}}
 
 </div>
@@ -154,6 +169,25 @@ function openGoals(evt, goalTime) {
     document.getElementById(goalTime).style.display = "block";
     evt.currentTarget.className += " active";
 }
+</script>
+
+<script>
+$(document).ready(function(){
+ $.ajaxSetup({ cache: false });
+ $('#search').keyup(function(){
+  $('#result').html('');
+  $('#state').val('');
+  var searchField = $('#search').val();
+  var expression = new RegExp(searchField, "i");
+  $.getJSON('test.json', function(data) {
+   $.each(data, function(key, value){
+    if (value.First.name.search(expression) != -1)
+    {
+     $('#result').append('<li class="list-group-item link-class"><'+value.First.name+'>');
+    }
+   });   
+  });
+ });
 </script>
 
     <script src="https://code.jquery.com/jquery.js"></script>

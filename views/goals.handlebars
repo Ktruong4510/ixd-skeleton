@@ -56,6 +56,10 @@ ul#faves > test {
 
 }
 
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+
 </style>
 <body>
  </div>
@@ -81,7 +85,7 @@ ul#faves > test {
     {{#each goals.weekly}}
     <div class = "test">
       <div class = "setWidth">
-          <h3><input type = "checkbox">{{description}}<br></h3>
+          <h3><input type = "checkbox"/> <label class = "strikethrough">{{description}}<br></label></h3>
 
       </div>
   </div>
@@ -93,8 +97,8 @@ ul#faves > test {
         </ul>
         <h3>Add a Goal</h3>
         <label for="goal">Goal:</label>
-        <input type="text" class="form-control" id="add" placeholder="Do 10 push-ups everday this week!" name="goal" />
-        <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addWeek()">
+        <input type="text" class="form-control" id="add" placeholder="Do 10 push-ups everday this week!" name="goal" required/>
+        <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addWeek()" required>
         </div>
 </div>
 
@@ -103,7 +107,7 @@ ul#faves > test {
     {{#each goals.monthly}}
     <div class = "test">
       <div class = "setWidth">
-          <h3><input type = "checkbox">{{moth}}<br></h3>
+          <h3><input type = "checkbox"><label class = "strikethrough">{{moth}}<br></label></h3>
 
       </div>
   </div>
@@ -112,9 +116,9 @@ ul#faves > test {
         <div>
           <ul id="Months"> </ul>
             <h3>Add a Goal</h3>
-             <label for="goal">Goal:</label>
-                <input type="text" class="form-control" id="adds" placeholder="Do 10 push-ups everday this week!" name="goal" />
-                <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addMonth()">
+             <label for="goal"> Goal:</label>
+                <input type="text" class="form-control" id="adds" placeholder="Do 10 push-ups everday this week!" name="goal" required/>
+                <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addMonth()" required>
         </div>
 
 </div>
@@ -124,7 +128,7 @@ ul#faves > test {
     {{#each goals.yearly}}
     <div class = "test">
       <div class = "setWidth">
-          <h3><input type = "checkbox">{{yer}}<br></h3>
+          <h3><input type = "checkbox"><label class = "strikethrough">{{yer}}<br></label></h3>
       </div>
   </div>
     {{/each}}
@@ -133,8 +137,8 @@ ul#faves > test {
           <ul id="Years"> </ul>
             <h3>Add a Goal</h3>
              <label for="goal">Goal:</label>
-                <input type="text" class="form-control" id="addz" placeholder="Do 10 push-ups everday this week!" name="goal" />
-                <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addYear()">
+                <input type="text" class="form-control" id="addz" placeholder="Do 10 push-ups everday this week!" name="goal" required/>
+                <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addYear()" required>
         </div>
 
 </div>
@@ -160,6 +164,23 @@ function openGoals(evt, goalTime) {
 }
 </script>
 
+<script >
+
+function newUser(){
+  var user = {};
+
+  user.weekly.description = document.getElementById("description").value;
+
+  //Debug
+  console.log(user);
+
+  var obj = JSON.parse('goals.json');
+  obj['weekly'].push(user);
+
+  jsonStr = JSON.stringify(obj);
+  console.log(jsonStr);
+}
+</script>
 
 <script>
     function addWeek(){
@@ -167,11 +188,12 @@ function openGoals(evt, goalTime) {
         var input = document.getElementById("add");
         var br = document.createElement("br");
         test.setAttribute("style",'text-align:left;');
-        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+input.value+"</h3>";
+        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+ "<label class = 'strikethrough'>"+input.value+ "</label>" + "</h3>";
         input.value = "";
 
-        document.getElementById("faves").appendChild(test).style.textAlign = "left";
+        document.getElementById("faves").appendChild(test).required;
         document.getElementById("faves").appendChild(br);
+        document.getElementById("faves").push(test);
     }
 </script>
 
@@ -181,7 +203,7 @@ function openGoals(evt, goalTime) {
         var inputs = document.getElementById("adds");
         var br = document.createElement("br");
  
-        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+inputs.value+"</h3>";
+        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+"<label class = 'strikethrough'>"+inputs.value+ "</label>" + "</h3>";
         inputs.value = "";
         document.getElementById("Months").appendChild(test);
         document.getElementById("Months").appendChild(br);
@@ -194,7 +216,7 @@ function openGoals(evt, goalTime) {
         var input3 = document.getElementById("addz");
         var br = document.createElement("br");
  
-        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+input3.value+"</h3>";
+        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+"<label class = 'strikethrough'>"+input3.value+ "</label>" + "</h3>";
         input3.value = "";
         document.getElementById("Years").appendChild(test);
         document.getElementById("Years").appendChild(br);

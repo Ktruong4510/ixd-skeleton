@@ -97,16 +97,17 @@
 <body style = "background-color: #F46E76">
 
 	<div class = "header">
-		<h1> ESGEDDIT <h1>
+		<h1> ESGEDDIT </h1>
 	</div>
 
 	<div class = "sup">
 		<h4> Welcome back Chen! </h4>
 	</div>
 
-	<div class = "quote">
-		<h3> <q>You're 2 miles away from your monthly jogging goal!</q> </h3>
+	<div class = "quote" id = "quoteDisplay">
+	
 	</div>
+	<button onClick = "newQuote()" class = "settings"> Motivate me! </button>
 
 	<div id = "User goals">
 		<a href = "goals.html" class = "bigbutton"> GOALS </a>
@@ -121,13 +122,35 @@
 	</div>
 
 	<div class = "settings">
-		<a href = "settings.html" class = "settings"> <b> SETTINGS </b> </a>
+		<a href = "/" class = "settings"> <b> Log Out </b> </a>
 	</div>
-			
+	
+	<script src = "homepage.js"/></script>		
 	<script src = images/Friends.jpg></script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+	<script >
+		var quotes = [
+'Today I will do what others won’t, so tomorrow I can accomplish what others can’t',
+'We are what we repeatedly do. Excellence then is not an act but a habit.',
+'No matter how slow you go, you are still lapping everybody on the couch.',
+'Sweat is fat crying',
+'The difference between the impossible and the possible lies in a person’s determination',
+'If you want something you’ve never had, you must be willing to do something you’ve never done.',
+'To give anything less than your best is to sacrifice the gift',
+'You’re only one workout away from a good mood',
+'Nothing will work unless you do',
+'Life begins at the end of your comfort zone',
+'Strength does not come from physical capacity. It comes from an indomitable will'
+]
+
+function newQuote() {
+	var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+}
+
+	</script>
 </body>
 </html>
