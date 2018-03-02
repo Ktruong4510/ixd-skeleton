@@ -1,0 +1,7 @@
+var data = require("../test2.json");
+
+exports.viewExercises2 = function(req, res) { 
+  console.log(data);
+  var name = req.params.name; 
+  res.render("exercises2", data);
+}

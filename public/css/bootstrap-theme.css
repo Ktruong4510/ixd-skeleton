@@ -150,6 +150,7 @@
   border-color: #28a4c9;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2aabd2', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  background-position: center;
 }
 
 .btn-info:hover,

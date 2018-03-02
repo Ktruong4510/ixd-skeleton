@@ -16,6 +16,7 @@ var goals = require('./routes/goals');
 var friends = require ('./routes/friends');
 var schedule = require ('./routes/schedule');
 var exercises = require ('./routes/exercises');
+var exercises2 = require ('./routes/exercises2');
 var strength = require ('./routes/strength');
 var muscle = require ('./routes/muscle');
 var weight = require ('./routes/weight');
@@ -23,6 +24,7 @@ var stamina = require ('./routes/stamina');
 var habit = require ('./routes/habit');
 var homepage = require('./routes/homepage');
 var test = require('./routes/test');
+var test2 = require('./routes/test2');
 // Example route
 // var user = require('./routes/user');
 
@@ -55,6 +57,7 @@ app.get('/goals.html', goals.viewGoals);
 app.get('/friends.html', friends.viewFriends);
 app.get('/schedule.html', schedule.viewSchedule);
 app.get('/exercises.html', exercises.viewExercises);
+app.get('/exercises2.html', exercises2.viewExercises2);
 //app.get('/excercises.html', excercises.addExcercises);
 app.get('/goals/strength.html', strength.viewStrength);
 app.get('/goals/muscles.html', muscle.viewMuscle);
