@@ -92,6 +92,12 @@ input[type=submit] {
           <p><input type="password" name="password" value="" placeholder="Password" required></p>
         </div>
 
+      <div class = "login-button">
+      <p class = "facebookLogin">
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+      </p>
+    </div>
           <p class="remember_me">
   <!--          <label>
               <input type="checkbox" name="remember_me" id="remember_me">
@@ -107,7 +113,6 @@ input[type=submit] {
         <div class = "login_button"
           <p><input type="submit" name="commit" value="LOGIN"></p>
         </div>
-
         </form>
 
   </section>
@@ -116,6 +121,8 @@ input[type=submit] {
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
+  {{> facebook}}
+  <script src="/js/facebook.js"></script>
 </body>
 </html>
 

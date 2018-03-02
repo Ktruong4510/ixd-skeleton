@@ -64,6 +64,7 @@ app.get('/goals/habit.html', habit.viewHabit);
 //app.get('/add', add.addExcercise);
 app.post('/homepage.html', homepage.viewHomepage);
 app.get('/add', add.addFriend);
+app.get('/homepage.html', homepage.viewHomepage);
 //app.get('/add', excercises.addFriend);
 // Example route
 // app.get('/users', user.list);
