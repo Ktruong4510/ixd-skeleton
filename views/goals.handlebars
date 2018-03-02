@@ -8,7 +8,7 @@
 <style>
 
 .header {
-	color:#FF7E10;
+	color:white;
 	padding: 25px 15px;
 	border:none;
 	font-size:24px;
@@ -24,12 +24,12 @@
 
 /* Style the buttons inside the tab */
 .tab button {
-    background-color: inherit;
+    background-color: white;
     float: left;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 30px;
+    padding: 14px 41px 15px 41px;
     transition: 0.3s;
     font-size: 17px;
 }
@@ -61,10 +61,10 @@ input[type=checkbox]:checked + label.strikethrough{
 }
 
 </style>
-<body>
+<body style = "background-color: lightsalmon">
  </div>
 		<div id="home">
-				<button onclick="goBack()" class="center-block"> home 
+				<button onclick="goBack()" class="left-block"> back
 			</button>
   			</div>
 
@@ -75,12 +75,12 @@ input[type=checkbox]:checked + label.strikethrough{
   			</div>
 
 <div class="tab">
-  <button class="tablinks" onclick="openGoals(event, 'Weekly')">Weekly</button>
+  <button class=active onclick="openGoals(event, 'Weekly')">Weekly</button>
   <button class="tablinks" onclick="openGoals(event, 'Monthly')">Monthly</button>
   <button class="tablinks" onclick="openGoals(event, 'Yearly')">Yearly</button>
 </div>
 
-<div id = "Weekly" class = "tabcontent">
+<div id = "Weekly" class = "tabcontent" style=display:block>
 
     {{#each goals.weekly}}
     <div class = "test">
