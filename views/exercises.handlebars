@@ -1,5 +1,19 @@
 <html>
 <head>
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='171071749-1',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
   <title>exercises</title> 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -8,7 +22,7 @@
 <style>
 
 .header {
-  color: #FBC872;
+  color: #71A7EF;
   border:none;
   font-size:24px;
   text-align: center;
@@ -43,7 +57,7 @@
 /* Create an active/current tablink class */
 .tab button.active {
     background-color: white;
-    border-bottom: 8px solid #FBC872;
+    border-bottom: 8px solid #71A7EF;
 }
 
 /* Style the tab content */
@@ -61,9 +75,101 @@
   font-size: 17;
 }
 
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #FBC872;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+.btn2 {
+  display: inline-block;
+  padding: 6px 12px;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #FBC872;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+          user-select: none;
+}
+.btn3 {
+  display: inline-block;
+  padding: 6px 12px;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #FBC872;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+.btn4 {
+  display: inline-block;
+  padding: 6px 12px;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #FBC872;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+
+
 </style>
 
 <body style = "background-color: white">
+
  </div>
     <div id="home">
       <input onclick="goBack()" type ="image" src="images/back.png" class="back" alt = "home" width = "18" height = "18">
@@ -71,11 +177,11 @@
         </div>
         <!--<div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
 
-
     <div id="Exercises Header">
         <div class = header>
           <h1> EXERCISES </h1>
         </div>
+    </div>
 
 <div class="tab">
   <button class="tablinks" onclick="openGoals(event, 'Strength')">Strength</button>
@@ -89,7 +195,7 @@
       {{#each First}}
     <div class = "test">
       <div class = "setWidth">
-       <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#data{{id}}"> {{name}} </button></h3>
+       <h3><button type="button" class="btn" data-toggle="collapse" data-target="#data{{id}}"> {{name}} </button></h3>
           <div id="data{{id}}" class="collapse">
           <p>{{strength}}</p>
           <img src = {{exerciseimage1_1}} img border ="25" width="173">
@@ -117,7 +223,7 @@
       {{#each Forth}}
     <div class = "test">
       <div class = "setWidth">
-       <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#data{{id}}"> {{name4}} </button></h3>
+       <h3><button type="button" class="btn2" data-toggle="collapse" data-target="#data{{id}}"> {{name4}} </button></h3>
           <div id="data{{id}}" class="collapse">
           <p>{{strength4}}</p>
           <img src = {{exerciseimage1_4}} img border ="25" width="173">
@@ -143,7 +249,7 @@
       {{#each Third}}
     <div class = "test">
       <div class = "setWidth">
-       <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#data{{id}}"> {{name3}} </button></h3>
+       <h3><button type="button" class="btn3" data-toggle="collapse" data-target="#data{{id}}"> {{name3}} </button></h3>
           <div id="data{{id}}" class="collapse">
           <p>{{strength3}}</p>
           <img src = {{exerciseimage1_3}} img border ="25" width="173">
@@ -169,7 +275,7 @@
       {{#each Second}}
     <div class = "test">
       <div class = "setWidth">
-       <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#data{{id}}"> {{name2}} </button></h3>
+       <h3><button type="button" class="btn4" data-toggle="collapse" data-target="#data{{id}}"> {{name2}} </button></h3>
           <div id="data{{id}}" class="collapse">
           <p>{{strength2}}</p>
           <img src = {{exerciseimage1_2}} img border ="25" width="173">
@@ -235,5 +341,14 @@ $(document).ready(function(){
     <script src="https://code.jquery.com/jquery.js"></script>
   <!-- Include all compiled plugins (blelow), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
+    <script src="/js/test.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-115288942-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 </body>
 </html>
