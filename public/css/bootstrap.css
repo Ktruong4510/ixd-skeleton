@@ -470,7 +470,7 @@ h6 .small {
 
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 52px;
 }
 
 h2,
@@ -2547,7 +2547,7 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #39b3d7;
+  background-color: #71A7EF ;
   border-color: #269abc;
 }
 

@@ -7,34 +7,38 @@
 </head>
 <style>
 
+.body{
+	padding: 0;
+	margin: 0;
+}
+
 .header {
-	color:#FFFFFF ;
+	color: #71A7EF;
 	padding: 1px 1px;
 	border:none;
-	margin: 35px 1px -20px 15px;
+	margin: 25px 1px -20px 15px;
 	text-align: center;
+	
 }
 
 .sup {
-	color:#FBC872;
 	padding: 1px 1px;
 	margin: 5px 0px -5px 0px;
 	text-align: center;
 }
 
 .quote {
-	background-color: palegreen;
-	color: #5C7FF0 ;
+	color: #FBC872 ;
 	margin: 10px 15px 10px 15px;
-	padding: 10px 0px 20px 0px;
+	padding: 5px 3px 10px 3px;
 	text-align: center;
 	font-size: 15pt;
 }
 
 .bigbutton {
-  	background-color: #71A7EF;
+  	background-color: #FBC872;
   	border: 4px solid white   ;
-  	color: black;
+  	color: white;
   	text-align: center;
   	vertical-align: middle;
   	line-height: 135px;
@@ -51,9 +55,9 @@
 }
 
 .button {
-  	background-color: #71A7EF;
+  	background-color: #FBC872;
   	border: 4px solid white   ;
-  	color: black;
+  	color: white;
   	text-align: center;
   	vertical-align: middle;
   	line-height: 110px;
@@ -95,26 +99,53 @@
 	width: 300px;
 	height: 50px;
 	margin-left: 12%;
-	margin-top:2%;
 	margin-bottom: 30px;
 }
 
 .settings {
 	background-color: #71A7EF;
-	border:none;
+	border:black;
 	color:#FFFFFF;
-	text-align: center;
 	line-height: 50px;
-	vertical-align: center;
 	font-size:18px;
+	text-align: center;
 	display: inline-block;
-	width: 300px;
+	width: 80%;
 	height: 50px;
-	margin-left: 12%;
+	margin-left: 10%;
+	margin-bottom: 10px;
 }
 
+	*{
+		box-sizing: border-box;
+	}
+
+	.row::after{
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	[class*="col-"] {
+		float: left;
+		padding: 15px;
+	}
+
+	.col-1 {width: 8.33%; background-color: red}
+	.col-2 {width: 16.66%; background-color: orange}
+	.col-3 {width: 25%; background-color: yellow}
+	.col-4 {width: 33.33%; background-color: green}
+	.col-5 {width: 41.66%; background-color: blue}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%; background-color: purple}
+
 </style>
-<body style = "background-color: palegreen">
+<body style = "background-color: white">
 
 	<div class = "header">
 		<h1> ESGEDDIT </h1>
@@ -141,6 +172,10 @@
 		<a href = "exercises.html" class = "button"> EXERCISES </a>
 		<!-- uncomment to test version 2 -->
 		<!--<a href = "exercises2.html" class = "button"> EXERCISES </a>-->
+
+	<!-- <div id = "Page dimensions test">
+		<a href = "pagedimensionstest.html" class = "button"> DIMENSIONS </a> -->
+
 	</div>
 
 	<div class = "settings">
