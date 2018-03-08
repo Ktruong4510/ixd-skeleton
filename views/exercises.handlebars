@@ -1,19 +1,5 @@
 <html>
 <head>
-<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='171071749-1',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
   <title>exercises</title> 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -176,7 +162,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
       <p class="back-text" onclick="goBack()"> Back </p>
         </div>
         <!--<div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
-
+{{#if viewAlt}}
     <div id="Exercises Header">
         <div class = header>
           <h1> EXERCISES </h1>
@@ -296,7 +282,143 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     {{/each}}
 
 </div>
-  
+
+{{else}}
+
+    <div id="Exercises2 Header">
+        <div class = header>
+          <h1><b> E X E R C I S E S </b></h1>
+          <h3 style="color:gray"> --- version 2 --- </h3>
+        </div>
+
+
+<div id="Strength Header">
+        <div class = heading>
+          <h2> S T R E N G T H </h2>
+        </div>
+
+<div id = "Strength" class = "tabcontent" style=display:block>
+    {{#each test}}
+      {{#each First}}
+    <div class = "test2">
+      <div class = "setWidth">
+       <h3><button type="button" class="btn" data-toggle="collapse" data-target="#data{{id}}"> {{name}} </button></h3>
+          <div id="data{{id}}" class="collapse">
+          <p>{{strength}}</p>
+          <img src = {{exerciseimage1_1}} img border ="25" width="192">
+          <img src = {{exerciseimage2_1}} img border ="25" width="192">
+          <p></p>
+          <p><b>{{target}}</b></p>
+          <p><b>{{equipment}}</b></p>
+          <p>{{step1_1}}</p>
+          <p>{{step2_1}}</p>
+          <p>{{step3_1}}</p>
+          <p>{{step4_1}}</p>
+          <p>{{step5_1}}</p>
+          <p>{{warning}}</p>
+          <!--<p>{{testdata}}</p>-->
+
+        </div>
+      </div>
+  </div>
+    {{/each}}
+    {{/each}}
+</div>
+
+<div id="Stretching Header">
+        <div class = heading>
+          <h2> S T R E T C H I N G </h2>
+        </div>
+
+<div id = "Stretching" class = "tabcontent" style=display:block>
+    {{#each test}}
+      {{#each Forth}}
+    <div class = "test2">
+      <div class = "setWidth">
+       <h3><button type="button" class="btn2" data-toggle="collapse" data-target="#data{{id}}"> {{name4}} </button></h3>
+          <div id="data{{id}}" class="collapse">
+          <p>{{strength4}}</p>
+          <img src = {{exerciseimage1_4}} img border ="25" width="192">
+          <img src = {{exerciseimage2_4}} img border ="25" width="192">
+          <p></p>
+          <p><b>{{target4}}</b></p>
+          <p><b>{{equipment4}}</b></p>
+          <p>{{step1_4}}</p>
+          <p>{{step2_4}}</p>
+          <p>{{step3_4}}</p>
+          <p>{{step4_4}}</p>
+          <p>{{step5_4}}</p>
+          <p>{{warning4}}</p>
+        </div>
+      </div>
+  </div>
+    {{/each}}
+    {{/each}}
+</div>
+
+<div id="Core Header">
+        <div class = heading>
+          <h2> C O R E </h2>
+        </div>
+
+<div id = "Core" class = "tabcontent" style=display:block>
+    {{#each test}}
+      {{#each Third}}
+    <div class = "test2">
+      <div class = "setWidth">
+       <h3><button type="button" class="btn3" data-toggle="collapse" data-target="#data{{id}}"> {{name3}} </button></h3>
+          <div id="data{{id}}" class="collapse">
+          <p>{{strength3}}</p>
+          <img src = {{exerciseimage1_3}} img border ="25" width="192">
+          <img src = {{exerciseimage2_3}} img border ="25" width="192">
+          <p></p>
+          <p><b>{{target3}}</b></p>
+          <p><b>{{equipment3}}</b></p>
+          <p>{{step1_3}}</p>
+          <p>{{step2_3}}</p>
+          <p>{{step3_3}}</p>
+          <p>{{step4_3}}</p>
+          <p>{{step5_3}}</p>
+          <p>{{warning3}}</p>
+        </div>
+      </div>
+  </div>
+    {{/each}}
+    {{/each}}
+</div>
+
+<div id="Cardio Header">
+        <div class = heading>
+          <h2> C A R D I O </h2>
+        </div>
+
+<div id = "Cardio" class = "tabcontent" style=display:block>
+    {{#each test}}
+      {{#each Second}}
+    <div class = "test2">
+      <div class = "setWidth">
+       <h3><button type="button" class="btn4" data-toggle="collapse" data-target="#data{{id}}"> {{name2}} </button></h3>
+          <div id="data{{id}}" class="collapse">
+          <p>{{strength2}}</p>
+          <img src = {{exerciseimage1_2}} img border ="25" width="192">
+          <img src = {{exerciseimage2_2}} img border ="25" width="192">
+          <p></p>
+          <p><b>{{target2}}</b></p>
+          <p><b>{{equipment2}}</b></p>
+          <p>{{step1_2}}</p>
+          <p>{{step2_2}}</p>
+          <p>{{step3_2}}</p>
+          <p>{{step4_2}}</p>
+          <p>{{step5_2}}</p>
+          <p>{{warning2}}</p>
+        </div>
+      </div>
+  </div>
+    {{/each}}
+    {{/each}}
+
+</div>
+{{/if}}
 <script>
 function goBack() {
     window.history.back();

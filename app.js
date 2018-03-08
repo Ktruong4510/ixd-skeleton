@@ -59,6 +59,7 @@ app.get('/friends.html', friends.viewFriends);
 app.get('/schedule.html', schedule.viewSchedule);
 app.get('/exercises.html', exercises.viewExercises);
 app.get('/exercises2.html', exercises2.viewExercises2);
+app.get('/viewAlt', exercises.viewAlt);
 //app.get('/excercises.html', excercises.addExcercises);
 app.get('/goals/strength.html', strength.viewStrength);
 app.get('/goals/muscles.html', muscle.viewMuscle);
