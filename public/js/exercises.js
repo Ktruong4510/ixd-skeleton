@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	$('#coreButton').click(coreClicked);
+	$('#cardioButton').click(cardioClicked);
 })
 
 function coreClicked() {
-	ga("send", "event", "core", "clicked");
+	ga("send", "event", "cardio", "clicked");
 }
