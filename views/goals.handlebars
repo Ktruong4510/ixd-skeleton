@@ -103,6 +103,7 @@ input[type=checkbox]{
 
 input[type=checkbox]:checked + label.strikethrough{
   text-decoration: line-through;
+  text-decoration-color: black;
 }
 
 input[type=checkbox2]{
@@ -148,7 +149,7 @@ input[type=checkbox2]:checked + label.strikethrough2{
         <ul id="faves">
         </ul>
         <h3>Add a Goal</h3>
-        <label for="goal">Goal:</label>
+        <label for="goal" style = "color: #FBC872">Goal:</label>
         <input type="text" class="form-control" id="add" placeholder="Do 10 push-ups everday this week!" name="goal" required/>
         <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addWeek()" required>
         </div>
@@ -159,7 +160,7 @@ input[type=checkbox2]:checked + label.strikethrough2{
     {{#each goals.monthly}}
     <div class = "test">
       <div class = "setWidth">
-          <h3><input type = "checkbox"><label class = "strikethrough">{{moth}}<br></label></h3>
+          <p><input type = "checkbox"><label class = "strikethrough">{{moth}}<br></label></p>
 
       </div>
   </div>
@@ -168,7 +169,7 @@ input[type=checkbox2]:checked + label.strikethrough2{
         <div>
           <ul id="Months"> </ul>
             <h3>Add a Goal</h3>
-             <label for="goal"> Goal:</label>
+             <label for="goal" style = "color: #FBC872"> Goal:</label>
                 <input type="text" class="form-control" id="adds" placeholder="Do 10 push-ups everday this month!" name="goal" required/>
                 <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addMonth()" required>
         </div>
@@ -180,7 +181,7 @@ input[type=checkbox2]:checked + label.strikethrough2{
     {{#each goals.yearly}}
     <div class = "test">
       <div class = "setWidth">
-          <h3><input type = "checkbox"><label class = "strikethrough">{{yer}}<br></label></h3>
+          <p><input type = "checkbox"><label class = "strikethrough">{{yer}}<br></label></p>
       </div>
   </div>
     {{/each}}
@@ -188,7 +189,7 @@ input[type=checkbox2]:checked + label.strikethrough2{
         <div>
           <ul id="Years"> </ul>
             <h3>Add a Goal</h3>
-             <label for="goal">Goal:</label>
+             <label for="goal" style = "color: #FBC872">Goal:</label>
                <input type="text" class="form-control" id="addz" placeholder="Do 10 push-ups everday this year!" name="goal" required/>
                 <input type="button" id="btnAdd" class="btn btn-default" value="Add Your Goal!" onclick="addYear()" required>
         </div>
@@ -241,7 +242,7 @@ function newUser(){
         var input = document.getElementById("add");
         var br = document.createElement("br");
         test.setAttribute("style",'text-align:left;');
-        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+"<label class = 'strikethrough'>"+input.value+ "</label>" + "</h3>";
+        test.innerHTML +="<p>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+"<label class = 'strikethrough'>"+input.value+ "</label>" + "</p>";
         input.value = "";
 
         document.getElementById("faves").appendChild(test).required;
@@ -256,7 +257,7 @@ function newUser(){
         var inputs = document.getElementById("adds");
         var br = document.createElement("br");
  
-        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+"<label class = 'strikethrough'>"+inputs.value+ "</label>" + "</h3>";
+        test.innerHTML +="<p>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+"<label class = 'strikethrough'>"+inputs.value+ "</label>" + "</p>";
         inputs.value = "";
         document.getElementById("Months").appendChild(test);
         document.getElementById("Months").appendChild(br);
@@ -269,7 +270,7 @@ function newUser(){
         var input3 = document.getElementById("addz");
         var br = document.createElement("br");
  
-        test.innerHTML +="<h3>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+"<label class = 'strikethrough'>"+input3.value+ "</label>" + "</h3>";
+        test.innerHTML +="<p>"+"<input type='checkbox' onclick='sel()' value='Select'/>"+"<label class = 'strikethrough'>"+input3.value+ "</label>" + "</p>";
         input3.value = "";
         document.getElementById("Years").appendChild(test);
         document.getElementById("Years").appendChild(br);
