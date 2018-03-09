@@ -19,6 +19,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
   <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+  <script src="js/exercises.js"></script>
 </head>
 <style>
 
@@ -378,7 +379,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </div>
 
 <div class="tab">
-  <button class=active onclick="openGoals(event, 'Core')">Core</button>
+  <button id="coreButton" class=active onclick="openGoals(event, 'Core')">Core</button>
 </div>
 
 <div id = "Core" class = "tabcontent">
