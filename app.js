@@ -24,7 +24,8 @@ var weight = require ('./routes/weight');
 var stamina = require ('./routes/stamina');
 var habit = require ('./routes/habit');
 var homepage = require('./routes/homepage');
-var pagedimensionstest = require('./routes/pagedimensionstest');
+var schedule2 = require('./routes/schedule2');
+var scheduIe2 = require('./routes/scheduIe2');
 var test = require('./routes/test');
 var test2 = require('./routes/test2');
 // Example route
@@ -73,7 +74,8 @@ app.post('/homepage.html', homepage.viewHomepage);
 //app.post('/pagedimensionstest.html', pagedimensionstest.viewPagedimensionstest);
 app.get('/add', add.addFriend);
 app.get('/homepage.html', homepage.viewHomepage);
-app.get('/pagedimensionstest.html', pagedimensionstest.viewPagedimensionstest);
+app.get('/schedule2.html', schedule2.viewSchedule2);
+app.get('/scheduIe2.html', scheduIe2.viewScheduIe2);
 //app.get('/add', excercises.addFriend);
 // Example route
 // app.get('/users', user.list);
