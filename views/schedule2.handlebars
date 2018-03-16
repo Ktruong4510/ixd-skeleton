@@ -62,11 +62,19 @@
     cursor: pointer;
 }
 
-.butt {
-   height:100%;
-   width:100%;
-   border-radius:0px;
-}
+.btn {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 75%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+  }
+
 
 
 </style>
@@ -86,8 +94,8 @@
 
 
   	<!-- Trigger/Open The Modal -->
-	<button id="myBtn" class = "butt"><img src="images/calendar_gaps2.png" alt="calendar"></button>	
-
+  <img src="images/calendar_gaps2.png" alt="calendar" style = "width: 100%;">
+  <button id="myBtn" class = "btn"> </button>
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
 
